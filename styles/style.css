@@ -18,21 +18,15 @@
 .header__menu-list {
   display: flex;
   align-items: center;
+  gap: 32px;
+  list-style: circle;
 }
 
 .header__menu-item {
-  display: flex;
-  align-items: center;
 }
 
-.header__menu-item:not(:first-child)::before {
-  content: '';
-  display: inline-block;
-  width: 6px;
-  height: 6px;
-  border: 0.5px solid #000000;
-  border-radius: 50%;
-  margin: 0 12px;
+.header__menu-item_no-bullit {
+  list-style: none;
 }
 
 .header__menu-link {
@@ -85,7 +79,11 @@
   width: 100%;
   max-width: 1100px;
   margin: 0 auto;
+  min-height: 757px;
   padding: 165px 50px 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
   background: url("../images/cover.jpg") center/cover no-repeat;
 }
 
@@ -93,6 +91,7 @@
   font-weight: 700;
   font-size: 100px;
   line-height: 115%;
+  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: #FFFFFF;
 }
@@ -114,7 +113,7 @@
 }
 
 .letter-spacing-extended {
-  letter-spacing: 0.3em;
+  letter-spacing: 0.6em;
 }
 
 .no-letter-spacing {
@@ -124,7 +123,6 @@
 .cover__title {
   position: relative;
   z-index: 1;
-  margin-bottom: 135px;
 }
 
 .cover__description {
@@ -167,13 +165,13 @@
 }
 
 .lots {
-  width: 1052px;
-  margin: 180px auto 0;
+  width: 100%;
+  margin: 180px 0 0;
   padding: 0 24px;
 }
 
 .lots__title {
-  margin-left: 40px;
+  padding-left: 16px;
   font-weight: 700;
   font-size: 40px;
   line-height: 47px;
@@ -182,7 +180,7 @@
 
 .lots__list {
   list-style: none;
-  margin-top: 24px;
+  margin-top: 27px;
   display: flex;
   flex-wrap: wrap;
   gap: 25px;
@@ -250,15 +248,15 @@
 
 .lots__more {
   display: inline-block;
-  margin: 32px 0 0 40px;
+  margin: 30px 0 0 16px;
   font-size: 20px;
   line-height: 23px;
   border-bottom: 1px solid #000000;
 }
 
 .about {
-  width: 1052px;
-  margin: 120px auto 0;
+  width: 100%;
+  margin: 120px 0 0;
   padding: 0 24px;
   display: grid;
   grid-template-columns: 334px minmax(0, 1fr);
@@ -289,7 +287,7 @@
 .about__column {
   display: flex;
   flex-direction: column;
-  padding-top: 35px;
+  padding-top: 133px;
 }
 
 .about__title {
@@ -351,7 +349,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 8px;
 }
 
 .footer__menu-item {
