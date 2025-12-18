@@ -149,7 +149,7 @@
 .lots {
   width: 1100px;
   margin: 180px auto 0;
-  padding: 0 24px;
+  padding: 0 50px;
 }
 
 .lots__heading {
@@ -240,7 +240,7 @@
 .about {
   width: 1100px;
   margin: 120px auto 0;
-  padding: 0 24px;
+  padding: 0 50px;
   display: grid;
   grid-template-columns: 334px minmax(0, 1fr);
   column-gap: 25px;
@@ -292,8 +292,8 @@
 
 .footer {
   width: 1100px;
-  margin: 80px auto 0;
-  padding: 0 50px 40px;
+  margin: 0 auto;
+  padding: 180px 50px 88px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: start;
@@ -303,6 +303,16 @@
   max-width: 264px;
   font-size: 18px;
   line-height: 24px;
+}
+
+.footer__contacts-link {
+  font-size: 18px;
+  line-height: 24px;
+}
+
+.footer__contacts-link_underlined {
+  border-bottom: 1px solid #000000;
+  width: fit-content;
 }
 
 .footer__menu {
