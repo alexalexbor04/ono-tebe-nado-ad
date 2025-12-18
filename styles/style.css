@@ -1,15 +1,14 @@
 .header {
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr min-content 1fr;
+  align-items: center;
+  padding: 92px 50px 96px;
   width: 1100px;
-  height: 293px;
   margin: 0 auto;
 }
 
-
 .header__menu {
-  position: absolute;
-  left: 50px;
-  top: 133px;
+  justify-self: start;
 }
 
 .header__menu-list {
@@ -44,10 +43,7 @@
 
 
 .header__logo {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  top: 92px;
+  justify-self: center;
 }
 
 .header__logo-image {
@@ -58,12 +54,10 @@
 
 
 .header__contacts {
-  position: absolute;
-  right: 50px;
-  top: 95px;
   display: flex;
   flex-direction: column;
   gap: 1px;
+  justify-self: end;
 }
 
 .header__contacts-link {
@@ -82,12 +76,6 @@
   max-width: 236px;
 }
 
-.overlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(0, 0, 0, 0.6);
-}
-
 .cover {
   position: relative;
   width: 1100px;
@@ -96,49 +84,45 @@
   background: url("../images/cover.jpg") center/cover no-repeat;
 }
 
-.cover__overlay {
+/* .cover__overlay {
   position: absolute;
   inset: 0;
   background: #000000;
   opacity: 0.6;
-}
+} */
 
 
 .cover__title {
-  position: absolute;
-  inset: 0;
+  position: relative;
+  inset: 165px 50px 135px;
 }
 
-.cover__title-line {
-  position: absolute;
+.cover__title-text {
   font-weight: 700;
   font-size: 100px;
   line-height: 115%;
-  letter-spacing: 0.3em;
   text-transform: uppercase;
   color: #FFFFFF;
 }
 
-.cover__title-line_place_top {
-  top: 165px;
-  left: 50px;
-  width: 286px;
+.aligned-text {
+  display: block;
+}
+
+.aligned-text_left {
   text-align: left;
 }
 
-.cover__title-line_place_middle {
-  top: 300px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 339px;
+.aligned-text_center {
   text-align: center;
 }
 
-.cover__title-line_place_bottom {
-  top: 435px;
-  right: 50px;
-  width: 387px;
+.aligned-text_right {
   text-align: right;
+}
+
+.letter-spacing-extended {
+  letter-spacing: 0.3em;
 }
 
 .cover__description {
@@ -160,6 +144,7 @@
   color: #FFFFFF;
   text-align: justify;
   text-align-last: justify;
+  word-spacing: 18px;
 }
 
 .cover__button {
@@ -182,17 +167,13 @@
 }
 
 .lots {
-  position: relative;
   width: 1052px;
-  height: 723px;
   margin: 180px auto 0;
   padding: 0 24px;
 }
 
 .lots__title {
-  position: absolute;
-  top: 0;
-  left: 40px;
+  margin-left: 40px;
   font-weight: 700;
   font-size: 40px;
   line-height: 47px;
@@ -200,72 +181,76 @@
 }
 
 .lots__list {
-  position: absolute;
-  top: 74px;
-  left: 0;
+  list-style: none;
+  margin-top: 24px;
   display: flex;
+  flex-wrap: wrap;
   gap: 25px;
 }
 
 .lots__item {
   width: 334px;
-  height: 596px;
+  min-height: 596px;
 }
 
-.lot {
+.card-link {
+  display: block;
+  height: 100%;
+  text-decoration: none;
+}
+
+.card {
   position: relative;
-  width: 334px;
-  height: 596px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  padding: 48px 40px;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  color: #FFFFFF;
 }
 
-.lots__item:nth-child(1) .lot {
+.card_type_film {
   background-image: url("../images/card-lot-01.jpg");
 }
 
-.lots__item:nth-child(2) .lot {
+.card_type_book {
   background-image: url("../images/card-lot-02.jpg");
 }
 
-.lots__item:nth-child(3) .lot {
+.card_type_picture {
   background-image: url("../images/card-lot-03.jpg");
 }
 
-.lot__overlay {
+.overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.6);
+  z-index: 0;
 }
 
-.lot__title {
-  position: absolute;
-  top: 48px;
-  left: 40px;
-  right: 40px;
+.card__title {
+  position: relative;
+  z-index: 1;
   font-weight: 700;
   font-size: 22px;
   line-height: 120%;
   text-decoration: underline;
   text-transform: uppercase;
-  color: #FFFFFF;
 }
 
-.lot__description {
-  position: absolute;
-  left: 40px;
-  right: 40px;
-  bottom: 48px;
+.card__text {
+  position: relative;
+  z-index: 1;
   font-size: 20px;
   line-height: 120%;
-  color: #FFFFFF;
 }
 
 .lots__more {
-  position: absolute;
-  left: 40px;
-  bottom: -2px;
+  display: inline-block;
+  margin: 32px 0 0 40px;
   font-size: 20px;
   line-height: 23px;
   border-bottom: 1px solid #000000;
