@@ -60,7 +60,7 @@
 
 .header__address {
   justify-self: end;
-  max-width: 236px;
+  max-width: 240px;
   font-size: 18px;
   line-height: 24px;
 }
@@ -134,8 +134,9 @@
   min-width: 256px;
   padding: 12px 32px;
   border: 1px solid #FFFFFF;
+  font-weight: 500;
   font-size: 22px;
-  line-height: 26px;
+  line-height: 25px;
   text-transform: uppercase;
   color: #FFFFFF;
   background: transparent;
@@ -292,8 +293,8 @@
 
 .footer {
   width: 1100px;
-  margin: 0 auto;
-  padding: 180px 50px 88px;
+  margin: 180px auto 0;
+  padding: 0 50px 88px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   align-items: start;
